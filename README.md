@@ -1,4 +1,8 @@
-# sync-script
+# sync-script V2
+
+Version 2 uses a webhook to receive info from Jellyseerr (media type, title, tvdb/tmdb IDs, and Jellyseerr issue message) which is passed into the script. This makes the whole process automated (except for closing the Open Issue).
+
+<hr>
 
 This is just a simple script to take user input and pass it to a cp command to move files to a folder on-prem. Later this folder is synced off-site with LFTP.
 
