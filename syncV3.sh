@@ -21,9 +21,17 @@ issueMsg="$4"
 commentURL="${baseURL}/issue/${issueID}/comment"
 statusURL="${baseURL}/issue/${issueID}/resolved"
 
+#logic to fix path issues
+find_path()
+{
+ [ -z "$path" ] && title="${title//&/and}" && path="$(find /mnt/data/media/ /mnt/data/media-kids/ -mindepth 1 -maxdepth 2 -type d | grep "$title")"
+}
+
 #match folder paths to media title
 path="$(find /mnt/data/media/ /mnt/data/media-kids/ -mindepth 1 -maxdepth 2 -type d | grep "$title")"
+find_path
 trimPath="$(find /mnt/data/media/ /mnt/data/media-kids/ -mindepth 1 -maxdepth 2 -type d | grep "$title" | cut -d'/' -f6-)"
+
 
 ##function to generate issue comment data
 generate_post_data()
