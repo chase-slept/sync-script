@@ -24,7 +24,7 @@ statusURL="${baseURL}/issue/${issueID}/resolved"
 #logic to fix path issues
 find_path()
 {
- [ -z "$path" ] && title="${title//&/and}" && path="$(find /mnt/data/media/ /mnt/data/media-kids/ -mindepth 1 -maxdepth 2 -type d | grep "$title")"
+ [ -z "$path" ] && title="${title//&/and}" && path="$(find /mnt/data/media/ /mnt/data/media-kids/ -mindepth 1 -maxdepth 2 -type d | grep "$title")" || echo "$title"
 }
 
 #match folder paths to media title
