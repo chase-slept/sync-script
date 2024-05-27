@@ -10,7 +10,7 @@ source /home/slept/scripts/webhooks/scrts.conf
 
 #variables, passed-in first
 mediaType=$1
-title="${2//:}"
+title="${2//[:\']}"
 issueID=$3
 issueMsg="$4"
 #unused for now
