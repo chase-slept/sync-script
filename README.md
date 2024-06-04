@@ -22,21 +22,19 @@ Specifically, this script receives data from a webhook, parses it and searches f
 
 There were several iterations of this script, so for posterity I've left the original notes below. Version 3 is the current implementation; any further version control updates will be based on that file.
 
+<hr>
+
 ### sync-script v3
 
 Version 3 includes **numerous** improvements. The Jellyseerr issue which sends the webhook is now automatically commented and closed via an API call; variables are more legibly named; the `cp` command now properly links without throwing an error (something about my NFSv4 mount point and the -a flag weren't quite vibing together--permissions and ownership are ultimately set on the destination server anyway so retaining the original owner/perms through to the sync folder was a moot effort).
 
-What? 3 improvments counts as *numerous*! 🙃
+What? 3 improvements counts as *numerous*! 🙃
 
 (Ignore the lack of versioning and commits here. I did not intend for this project to be version-controlled and am simply using this repository as a *repository*.)
-
-<hr>
 
 ### sync-script v2
 
 Version 2 uses a webhook to receive info from Jellyseerr (media type, title, tvdb/tmdb IDs, and Jellyseerr issue message) which is passed into the script. This makes the whole process of selecting media automated (except for closing the Open Issue).
-
-<hr>
 
 ### sync-script v1
 
