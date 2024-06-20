@@ -20,7 +20,7 @@ Specifically, this script receives data from a webhook, parses it and searches f
 
 ## Sync-Script
 
-There were several iterations of this script, so for posterity I've left the original notes below. Version 3 is the current implementation; any further version control updates will be based on that file.
+There were several iterations of this script, so for posterity I've left the original notes below. Version 3 is the current implementation; any further version control updates will be based on that file. This script runs locally on the Raspberry Pi on my local network.
 
 <hr>
 
